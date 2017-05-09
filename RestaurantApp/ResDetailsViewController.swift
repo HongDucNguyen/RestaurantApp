@@ -42,6 +42,17 @@ class ResDetailsViewController: UIViewController{
             detailsAdd.sizeToFit()
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueResWeb"{
+            (segue.destination as! ResWebViewController).resWeb = rDetails!.website
+        }
+    }
+    
+    @IBAction func unWindSegue(segue: UIStoryboardSegue){
+        
+    }
+    
     @IBAction func webAccess(_ sender: Any) {
         let url = URL(string: rDetails!.website)!
         if UIApplication.shared.canOpenURL(url){
