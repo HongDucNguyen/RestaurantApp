@@ -55,6 +55,10 @@ class ResDetailsViewController: UIViewController{
     //Create function to unwind segue
     @IBAction func unWindSegue(segue: UIStoryboardSegue){
     }
+    @IBAction func makeCall(_ sender: Any) {
+        guard let url = URL(string: "telprompt://\(rDetails!.tel)" ) else { return }
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    }
 
     /*
     // MARK: - Navigation

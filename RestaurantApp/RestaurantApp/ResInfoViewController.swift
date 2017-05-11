@@ -36,7 +36,6 @@ class ResInfoViewController: UIViewController {
             infoImage.image = UIImage(named: r!.name)
             infoLabel.text = r!.info
             infoLabel.sizeToFit()
-            infoName.sizeToFit()
         }
     }
     //Prepare for segue - pass data from this view to the next view
