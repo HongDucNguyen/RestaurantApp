@@ -23,6 +23,9 @@
 		9BE79EAE1EBEC4A700B84B0A /* ResInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE79EAD1EBEC4A700B84B0A /* ResInfoViewController.swift */; };
 		9BE79EB21EC00B5E00B84B0A /* ResDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE79EB11EC00B5E00B84B0A /* ResDetailsViewController.swift */; };
 		9BE79EB41EC2877400B84B0A /* ResWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE79EB31EC2877400B84B0A /* ResWebViewController.swift */; };
+		9BE79EB71EC2950300B84B0A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE79EB61EC2950300B84B0A /* MapKit.framework */; };
+		9BE79EB91EC2B58600B84B0A /* ResMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE79EB81EC2B58600B84B0A /* ResMapViewController.swift */; };
+		9BE79EBB1EC2E51C00B84B0A /* ResAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE79EBA1EC2E51C00B84B0A /* ResAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,9 @@
 		9BE79EAD1EBEC4A700B84B0A /* ResInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResInfoViewController.swift; sourceTree = "<group>"; };
 		9BE79EB11EC00B5E00B84B0A /* ResDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResDetailsViewController.swift; path = ../ResDetailsViewController.swift; sourceTree = "<group>"; };
 		9BE79EB31EC2877400B84B0A /* ResWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResWebViewController.swift; sourceTree = "<group>"; };
+		9BE79EB61EC2950300B84B0A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		9BE79EB81EC2B58600B84B0A /* ResMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResMapViewController.swift; sourceTree = "<group>"; };
+		9BE79EBA1EC2E51C00B84B0A /* ResAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BE79EB71EC2950300B84B0A /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +106,7 @@
 				9B9AC7E11EBE883C008EDCA1 /* RestaurantAppTests */,
 				9B9AC7EC1EBE883C008EDCA1 /* RestaurantAppUITests */,
 				9B9AC7C81EBE883C008EDCA1 /* Products */,
+				9BE79EB51EC2950300B84B0A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,6 +126,8 @@
 				9B9AC7CA1EBE883C008EDCA1 /* AppDelegate.swift */,
 				9B9AC7CC1EBE883C008EDCA1 /* ViewController.swift */,
 				9B9AC7CE1EBE883C008EDCA1 /* Main.storyboard */,
+				9BE79EBA1EC2E51C00B84B0A /* ResAnnotation.swift */,
+				9BE79EB81EC2B58600B84B0A /* ResMapViewController.swift */,
 				9BE79EB31EC2877400B84B0A /* ResWebViewController.swift */,
 				9BE79EB11EC00B5E00B84B0A /* ResDetailsViewController.swift */,
 				9BE79EAD1EBEC4A700B84B0A /* ResInfoViewController.swift */,
@@ -150,6 +160,14 @@
 				9B9AC7EF1EBE883C008EDCA1 /* Info.plist */,
 			);
 			path = RestaurantAppUITests;
+			sourceTree = "<group>";
+		};
+		9BE79EB51EC2950300B84B0A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9BE79EB61EC2950300B84B0A /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +239,11 @@
 					9B9AC7C61EBE883C008EDCA1 = {
 						CreatedOnToolsVersion = 8.3.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					9B9AC7DD1EBE883C008EDCA1 = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -293,7 +316,9 @@
 				9B9AC7FE1EBE980B008EDCA1 /* Restaurant.swift in Sources */,
 				9BE79EAE1EBEC4A700B84B0A /* ResInfoViewController.swift in Sources */,
 				9B9AC7CD1EBE883C008EDCA1 /* ViewController.swift in Sources */,
+				9BE79EBB1EC2E51C00B84B0A /* ResAnnotation.swift in Sources */,
 				9B9AC7CB1EBE883C008EDCA1 /* AppDelegate.swift in Sources */,
+				9BE79EB91EC2B58600B84B0A /* ResMapViewController.swift in Sources */,
 				9B9AC7D31EBE883C008EDCA1 /* RestaurantApp.xcdatamodeld in Sources */,
 				9BE79EAC1EBEBF1400B84B0A /* ResListTableViewCell.swift in Sources */,
 				9B9AC7FC1EBE8E71008EDCA1 /* ResListViewController.swift in Sources */,

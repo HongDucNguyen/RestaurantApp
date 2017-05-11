@@ -37,31 +37,21 @@ class ResListViewController: UIViewController, UITableViewDataSource, UITableVie
         // #warning Incomplete implementation, return the number of rows
         return Utility.Restaurants.count
     }
-    
+    //Collect data from entity and insert it to table view - Create a Restaurant List
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "resList", for: indexPath) as! ResListTableViewCell
         cell.nameLabel.text = Utility.Restaurants[indexPath.row].name
         cell.nameImage.image = UIImage(named: Utility.Restaurants[indexPath.row].name)
-        //cell.textLabel?.text = Utility.Restaurants[indexPath.row].name
-        //cell.imageView?.image = UIImage(named: Utility.Restaurants[indexPath.row].name)
+        cell.nameRating.text = "Rating \(Utility.Restaurants[indexPath.row].rating) stars"
+        
         return cell
     }
     
-    
+    //Create function to perform segue when click on a cell in the list
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "segueResInfo", sender: Utility.Restaurants[indexPath.row])
     }
-    
-    /*func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        let alertController = UIAlertController(title: "Hint", message: "You have selected row \(indexPath.row).", preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-        alertController.addAction(alertAction)
-        present(alertController, animated: true, completion: nil)
-        
-        performSegue(withIdentifier: "segueResInfo", sender: Utility.Restaurants[indexPath.row])
-        temp = Utility.Restaurants[indexPath.row]
-    }*/
-    
+    //Create function to prepare for segue in which pass the data from object to new object in the next view
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if segue.identifier == "segueResInfo"{
             if let indexPath = resTable.indexPathForSelectedRow{
@@ -70,7 +60,7 @@ class ResListViewController: UIViewController, UITableViewDataSource, UITableVie
             }
         }
     }
-    
+    //Create function to unwind segue, the list will be reloaded
     @IBAction func unWindSegue(segue: UIStoryboardSegue){
         resTable.reloadData()
     }

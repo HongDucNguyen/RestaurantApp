@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//NEW FUNCTION: Display website of the resraurant - it is embed in the app
 class ResWebViewController: UIViewController, UIWebViewDelegate {
     
     var resWeb: String?
@@ -17,14 +17,12 @@ class ResWebViewController: UIViewController, UIWebViewDelegate {
 
         // Do any additional setup after loading the view.
         webView.delegate = self
-        if let url = URL(string: resWeb!){
-            let request = URLRequest(url: url)
-            webView.loadRequest(request)
+        if resWeb != ""{
+            if let url = URL(string: resWeb!){
+                let request = URLRequest(url: url)
+                webView.loadRequest(request)
+            }
         }
-        /*if UIApplication.shared.canOpenURL(url){
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
-        }*/
-
     }
 
     override func didReceiveMemoryWarning() {

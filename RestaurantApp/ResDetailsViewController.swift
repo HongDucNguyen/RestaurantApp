@@ -9,7 +9,7 @@
 import UIKit
 
 class ResDetailsViewController: UIViewController{
-
+    //Declare a variable to receive data from previous view
     var rDetails: Restau?
     
     override func viewDidLoad() {
@@ -30,6 +30,7 @@ class ResDetailsViewController: UIViewController{
     @IBOutlet weak var detailsWeb: UILabel!
     @IBOutlet weak var detailsAdd: UILabel!
     
+    //Oveeride function to display infomation
     override func viewWillAppear(_ animated: Bool) {
         if rDetails != nil{
             detailsName.text = rDetails!.name
@@ -42,24 +43,18 @@ class ResDetailsViewController: UIViewController{
             detailsAdd.sizeToFit()
         }
     }
-    
+    //Override function to prepare for segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueResWeb"{
             (segue.destination as! ResWebViewController).resWeb = rDetails!.website
         }
-    }
-    
-    @IBAction func unWindSegue(segue: UIStoryboardSegue){
-        
-    }
-    
-    @IBAction func webAccess(_ sender: Any) {
-        let url = URL(string: rDetails!.website)!
-        if UIApplication.shared.canOpenURL(url){
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        if segue.identifier == "segueResMap"{
+            (segue.destination as! ResMapViewController).resMap = rDetails
         }
     }
-    
+    //Create function to unwind segue
+    @IBAction func unWindSegue(segue: UIStoryboardSegue){
+    }
 
     /*
     // MARK: - Navigation
