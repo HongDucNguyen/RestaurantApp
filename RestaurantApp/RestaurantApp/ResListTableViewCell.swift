@@ -7,11 +7,11 @@
 //
 
 import UIKit
-
+//Create a class for prototype cell in the tableview
 class ResListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
-    
+    @IBOutlet weak var nameRating: UILabel!
     @IBOutlet var nameImage: UIImageView!
     
     override func awakeFromNib() {
