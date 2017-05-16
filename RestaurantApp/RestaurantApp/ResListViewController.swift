@@ -61,6 +61,7 @@ class ResListViewController: UIViewController, UITableViewDataSource, UITableVie
         }
     }
     
+    //It creates the song function to be controlled in another view controller
     @IBAction func playSong(_ sender: UIButton) {
         if MusicViewController.soundPlayer!.isPlaying {
             MusicViewController.eslapsedTime = MusicViewController.soundPlayer!.currentTime

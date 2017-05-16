@@ -30,16 +30,21 @@ class ResWebViewController: UIViewController, UIWebViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     @IBOutlet weak var webView: UIWebView!
-    
+ 
+    //It creates the song function to be controlled in another view controller
+    @IBAction func playSong(_ sender: Any) {
+        
+        if MusicViewController.soundPlayer!.isPlaying {
+            MusicViewController.eslapsedTime = MusicViewController.soundPlayer!.currentTime
+            print("\(MusicViewController.eslapsedTime)")
+            MusicViewController.soundPlayer!.pause()
+        }else
+        {
+            MusicViewController.soundPlayer!.currentTime = MusicViewController.eslapsedTime
+            MusicViewController.soundPlayer!.play()
+        }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
-    */
 
+   
 }
