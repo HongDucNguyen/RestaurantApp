@@ -21,7 +21,9 @@ class MainSettingsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func unWindSegue(segue: UIStoryboardSegue){
+        
+    }
     /*
     // MARK: - Navigation
 

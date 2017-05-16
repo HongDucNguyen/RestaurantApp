@@ -60,6 +60,19 @@ class ResListViewController: UIViewController, UITableViewDataSource, UITableVie
             }
         }
     }
+    
+    @IBAction func playSong(_ sender: UIButton) {
+        if MusicViewController.soundPlayer!.isPlaying {
+            MusicViewController.eslapsedTime = MusicViewController.soundPlayer!.currentTime
+            print("\(MusicViewController.eslapsedTime)")
+            MusicViewController.soundPlayer!.pause()
+        }else
+        {
+            MusicViewController.soundPlayer!.currentTime = MusicViewController.eslapsedTime
+            MusicViewController.soundPlayer!.play()
+        }
+    }
+    
     //Create function to unwind segue, the list will be reloaded
     @IBAction func unWindSegue(segue: UIStoryboardSegue){
         resTable.reloadData()
