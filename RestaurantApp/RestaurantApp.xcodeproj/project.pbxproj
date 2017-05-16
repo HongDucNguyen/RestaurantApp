@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B4C24FC1ECB127C009FA65C /* MainSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C24FB1ECB127C009FA65C /* MainSettingsViewController.swift */; };
+		9B4C24FE1ECB1292009FA65C /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C24FD1ECB1292009FA65C /* MusicViewController.swift */; };
+		9B4C25021ECB1740009FA65C /* something.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B4C24FF1ECB1740009FA65C /* something.mp3 */; };
+		9B4C25031ECB1740009FA65C /* viva.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B4C25001ECB1740009FA65C /* viva.mp3 */; };
+		9B4C25041ECB1740009FA65C /* sign.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B4C25011ECB1740009FA65C /* sign.mp3 */; };
 		9B9AC7CB1EBE883C008EDCA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9AC7CA1EBE883C008EDCA1 /* AppDelegate.swift */; };
 		9B9AC7CD1EBE883C008EDCA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9AC7CC1EBE883C008EDCA1 /* ViewController.swift */; };
 		9B9AC7D01EBE883C008EDCA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B9AC7CE1EBE883C008EDCA1 /* Main.storyboard */; };
@@ -46,6 +51,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B4C24FB1ECB127C009FA65C /* MainSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSettingsViewController.swift; sourceTree = "<group>"; };
+		9B4C24FD1ECB1292009FA65C /* MusicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
+		9B4C24FF1ECB1740009FA65C /* something.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = something.mp3; sourceTree = "<group>"; };
+		9B4C25001ECB1740009FA65C /* viva.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = viva.mp3; sourceTree = "<group>"; };
+		9B4C25011ECB1740009FA65C /* sign.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sign.mp3; sourceTree = "<group>"; };
 		9B9AC7C71EBE883C008EDCA1 /* RestaurantApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B9AC7CA1EBE883C008EDCA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B9AC7CC1EBE883C008EDCA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +136,8 @@
 				9B9AC7CA1EBE883C008EDCA1 /* AppDelegate.swift */,
 				9B9AC7CC1EBE883C008EDCA1 /* ViewController.swift */,
 				9B9AC7CE1EBE883C008EDCA1 /* Main.storyboard */,
+				9B4C24FB1ECB127C009FA65C /* MainSettingsViewController.swift */,
+				9B4C24FD1ECB1292009FA65C /* MusicViewController.swift */,
 				9BE79EBA1EC2E51C00B84B0A /* ResAnnotation.swift */,
 				9BE79EB81EC2B58600B84B0A /* ResMapViewController.swift */,
 				9BE79EB31EC2877400B84B0A /* ResWebViewController.swift */,
@@ -134,6 +146,9 @@
 				9BE79EAB1EBEBF1400B84B0A /* ResListTableViewCell.swift */,
 				9B9AC7FB1EBE8E71008EDCA1 /* ResListViewController.swift */,
 				9B9AC7D41EBE883C008EDCA1 /* Assets.xcassets */,
+				9B4C24FF1ECB1740009FA65C /* something.mp3 */,
+				9B4C25001ECB1740009FA65C /* viva.mp3 */,
+				9B4C25011ECB1740009FA65C /* sign.mp3 */,
 				9B9AC7D61EBE883C008EDCA1 /* LaunchScreen.storyboard */,
 				9B9AC7D91EBE883C008EDCA1 /* Info.plist */,
 				9B9AC7D11EBE883C008EDCA1 /* RestaurantApp.xcdatamodeld */,
@@ -283,8 +298,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B9AC7D81EBE883C008EDCA1 /* LaunchScreen.storyboard in Resources */,
+				9B4C25031ECB1740009FA65C /* viva.mp3 in Resources */,
+				9B4C25021ECB1740009FA65C /* something.mp3 in Resources */,
 				9B9AC7D51EBE883C008EDCA1 /* Assets.xcassets in Resources */,
 				9B9AC7D01EBE883C008EDCA1 /* Main.storyboard in Resources */,
+				9B4C25041ECB1740009FA65C /* sign.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,8 +333,10 @@
 				9BE79EB21EC00B5E00B84B0A /* ResDetailsViewController.swift in Sources */,
 				9B9AC7FE1EBE980B008EDCA1 /* Restaurant.swift in Sources */,
 				9BE79EAE1EBEC4A700B84B0A /* ResInfoViewController.swift in Sources */,
+				9B4C24FE1ECB1292009FA65C /* MusicViewController.swift in Sources */,
 				9B9AC7CD1EBE883C008EDCA1 /* ViewController.swift in Sources */,
 				9BE79EBB1EC2E51C00B84B0A /* ResAnnotation.swift in Sources */,
+				9B4C24FC1ECB127C009FA65C /* MainSettingsViewController.swift in Sources */,
 				9B9AC7CB1EBE883C008EDCA1 /* AppDelegate.swift in Sources */,
 				9BE79EB91EC2B58600B84B0A /* ResMapViewController.swift in Sources */,
 				9B9AC7D31EBE883C008EDCA1 /* RestaurantApp.xcdatamodeld in Sources */,
