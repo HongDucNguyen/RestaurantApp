@@ -31,6 +31,8 @@
 		9BE79EB71EC2950300B84B0A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE79EB61EC2950300B84B0A /* MapKit.framework */; };
 		9BE79EB91EC2B58600B84B0A /* ResMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE79EB81EC2B58600B84B0A /* ResMapViewController.swift */; };
 		9BE79EBB1EC2E51C00B84B0A /* ResAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE79EBA1EC2E51C00B84B0A /* ResAnnotation.swift */; };
+		EE24E2641ECB4AC900A46DB1 /* PhoneSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE24E2631ECB4AC900A46DB1 /* PhoneSettingsViewController.swift */; };
+		EE24E2661ECB4B9A00A46DB1 /* ShareSocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE24E2651ECB4B9A00A46DB1 /* ShareSocialViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,8 @@
 		9BE79EB61EC2950300B84B0A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9BE79EB81EC2B58600B84B0A /* ResMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResMapViewController.swift; sourceTree = "<group>"; };
 		9BE79EBA1EC2E51C00B84B0A /* ResAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResAnnotation.swift; sourceTree = "<group>"; };
+		EE24E2631ECB4AC900A46DB1 /* PhoneSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneSettingsViewController.swift; sourceTree = "<group>"; };
+		EE24E2651ECB4B9A00A46DB1 /* ShareSocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareSocialViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,8 @@
 				9B9AC7FD1EBE980B008EDCA1 /* Restaurant.swift */,
 				9B9AC7FF1EBE98F6008EDCA1 /* Utilities.swift */,
 				9B9AC8011EBEA127008EDCA1 /* Pretest.swift */,
+				EE24E2631ECB4AC900A46DB1 /* PhoneSettingsViewController.swift */,
+				EE24E2651ECB4B9A00A46DB1 /* ShareSocialViewController.swift */,
 			);
 			path = RestaurantApp;
 			sourceTree = "<group>";
@@ -329,6 +335,7 @@
 			files = (
 				9B9AC8001EBE98F6008EDCA1 /* Utilities.swift in Sources */,
 				9B9AC8021EBEA127008EDCA1 /* Pretest.swift in Sources */,
+				EE24E2641ECB4AC900A46DB1 /* PhoneSettingsViewController.swift in Sources */,
 				9BE79EB41EC2877400B84B0A /* ResWebViewController.swift in Sources */,
 				9BE79EB21EC00B5E00B84B0A /* ResDetailsViewController.swift in Sources */,
 				9B9AC7FE1EBE980B008EDCA1 /* Restaurant.swift in Sources */,
@@ -339,6 +346,7 @@
 				9B4C24FC1ECB127C009FA65C /* MainSettingsViewController.swift in Sources */,
 				9B9AC7CB1EBE883C008EDCA1 /* AppDelegate.swift in Sources */,
 				9BE79EB91EC2B58600B84B0A /* ResMapViewController.swift in Sources */,
+				EE24E2661ECB4B9A00A46DB1 /* ShareSocialViewController.swift in Sources */,
 				9B9AC7D31EBE883C008EDCA1 /* RestaurantApp.xcdatamodeld in Sources */,
 				9BE79EAC1EBEBF1400B84B0A /* ResListTableViewCell.swift in Sources */,
 				9B9AC7FC1EBE8E71008EDCA1 /* ResListViewController.swift in Sources */,
