@@ -21,6 +21,7 @@ class PhoneSettingsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //to open the phone settings
     override func viewDidAppear(_ animated: Bool) {
         let alertController = UIAlertController (title: "Phone Settings", message: "Go to Settings?", preferredStyle: .alert)
         
