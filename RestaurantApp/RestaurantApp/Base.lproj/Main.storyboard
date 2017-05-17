@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -126,7 +128,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back" image="back"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="cCE-Aa-tC0"/>
+                                    <segue destination="24e-sR-uFy" kind="unwind" unwindAction="unWindSegueWithSegue:" id="412-tG-ufo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22N-kq-2dE">
@@ -150,14 +152,13 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sKI-gD-M5z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="24e-sR-uFy" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="85.599999999999994" y="1063.7181409295354"/>
         </scene>
         <!--Music View Controller-->
         <scene sceneID="sbM-SA-69Q">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5w7-Kc-Ik7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="QKY-iv-o5a" userLabel="Exit" sceneMemberID="exit"/>
                 <viewController id="XVI-Y9-EuW" customClass="MusicViewController" customModule="RestaurantApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZI8-Wj-yYo"/>
@@ -167,21 +168,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47E-BB-vcR">
-                                <rect key="frame" x="0.0" y="59" width="375" height="547"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47E-BB-vcR">
+                                <rect key="frame" x="-4" y="50" width="383" height="557"/>
                                 <color key="backgroundColor" red="0.30112892670157065" green="0.30112892670157065" blue="0.30112892670157065" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="music_background" translatesAutoresizingMaskIntoConstraints="NO" id="xys-mS-1YU">
-                                <rect key="frame" x="0.0" y="59" width="375" height="547"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music_background" translatesAutoresizingMaskIntoConstraints="NO" id="xys-mS-1YU">
+                                <rect key="frame" x="-20" y="50" width="415" height="557"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="voI-yU-JFO">
-                                <rect key="frame" x="16" y="619" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="voI-yU-JFO">
+                                <rect key="frame" x="26" y="617" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="voI-yU-JFO" secondAttribute="height" multiplier="1:1" id="0gc-vk-5Tu"/>
+                                </constraints>
                                 <state key="normal" title="Back" image="back"/>
                                 <connections>
                                     <segue destination="QKY-iv-o5a" kind="unwind" unwindAction="unWindSegueWithSegue:" id="Xuy-dj-A2i"/>
@@ -223,6 +224,14 @@
                                 <rect key="frame" x="15" y="134" width="109" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DgQ-tF-AlK">
+                                <rect key="frame" x="315" y="410" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="playpause"/>
+                                <connections>
+                                    <action selector="playSong:" destination="XVI-Y9-EuW" eventType="touchUpInside" id="h2t-9n-2ga"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfh-WR-Xu3">
                                 <rect key="frame" x="315" y="273" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -235,14 +244,6 @@
                                 <rect key="frame" x="15" y="273" width="109" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DgQ-tF-AlK">
-                                <rect key="frame" x="315" y="410" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="playpause"/>
-                                <connections>
-                                    <action selector="playSong:" destination="XVI-Y9-EuW" eventType="touchUpInside" id="h2t-9n-2ga"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="harry_styles" translatesAutoresizingMaskIntoConstraints="NO" id="yq4-uX-vnL">
                                 <rect key="frame" x="15" y="410" width="109" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -291,10 +292,25 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="voI-yU-JFO" firstAttribute="leading" secondItem="P3I-7k-gjy" secondAttribute="leadingMargin" constant="10" id="EWF-Q5-cDG"/>
+                            <constraint firstItem="47E-BB-vcR" firstAttribute="top" secondItem="ZI8-Wj-yYo" secondAttribute="bottom" constant="30" id="NTa-2m-E61"/>
+                            <constraint firstItem="xys-mS-1YU" firstAttribute="leading" secondItem="P3I-7k-gjy" secondAttribute="leading" constant="-20" id="S80-my-RW3"/>
+                            <constraint firstItem="47E-BB-vcR" firstAttribute="leading" secondItem="P3I-7k-gjy" secondAttribute="leadingMargin" constant="-20" id="Uje-0b-XcL"/>
+                            <constraint firstItem="voI-yU-JFO" firstAttribute="width" secondItem="P3I-7k-gjy" secondAttribute="height" multiplier="40:667" id="YsP-uY-Lr8"/>
+                            <constraint firstAttribute="trailing" secondItem="xys-mS-1YU" secondAttribute="trailing" constant="-20" id="a0E-la-PBh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="47E-BB-vcR" secondAttribute="trailing" constant="-20" id="dBG-xY-yzH"/>
+                            <constraint firstItem="KFr-DO-XDF" firstAttribute="top" secondItem="voI-yU-JFO" secondAttribute="bottom" constant="10" id="fuE-RT-9mR"/>
+                            <constraint firstItem="voI-yU-JFO" firstAttribute="top" secondItem="xys-mS-1YU" secondAttribute="bottom" constant="10" id="hsn-K1-tHP"/>
+                            <constraint firstItem="voI-yU-JFO" firstAttribute="top" secondItem="47E-BB-vcR" secondAttribute="bottom" constant="10" id="nWQ-Dd-iq4"/>
+                            <constraint firstItem="xys-mS-1YU" firstAttribute="top" secondItem="ZI8-Wj-yYo" secondAttribute="bottom" constant="30" id="oQx-3O-PhN"/>
+                        </constraints>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5w7-Kc-Ik7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="QKY-iv-o5a" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="853.60000000000002" y="1063.7181409295354"/>
+            <point key="canvasLocation" x="1412" y="808"/>
         </scene>
         <!--Phone Settings-->
         <scene sceneID="IRX-hW-P3D">
@@ -313,7 +329,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back" image="back"/>
                                 <connections>
-                                    <segue destination="NIL-Rs-Lwj" kind="show" id="Kie-pY-9vT"/>
+                                    <segue destination="sGv-D5-pB6" kind="unwind" unwindAction="unWindSegueWithSegue:" id="kKh-xA-k6F"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -321,8 +337,9 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KPR-aQ-sqN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="sGv-D5-pB6" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="854" y="1737"/>
+            <point key="canvasLocation" x="625" y="1934"/>
         </scene>
         <!--About Us-->
         <scene sceneID="2Qf-oT-CbO">
@@ -383,7 +400,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back" image="back"/>
                                 <connections>
-                                    <segue destination="NIL-Rs-Lwj" kind="show" id="YYu-Lv-1Wg"/>
+                                    <segue destination="81V-yH-0ux" kind="unwind" unwindAction="unWindSegueWithSegue:" id="tOW-uk-Jsg"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Duc Nguyen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0He-9x-pAv">
@@ -398,8 +415,9 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qJB-pt-cMt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="81V-yH-0ux" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1632.8" y="1736.5817091454273"/>
+            <point key="canvasLocation" x="1303" y="1675"/>
         </scene>
         <!--Share Social-->
         <scene sceneID="0df-cC-GAj">
@@ -442,7 +460,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back" image="back"/>
                                 <connections>
-                                    <segue destination="NIL-Rs-Lwj" kind="show" id="sgc-dV-lMB"/>
+                                    <segue destination="Qkl-dH-j6X" kind="unwind" unwindAction="unWindSegueWithSegue:" id="quq-Iy-rPq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Cy-7k-9u2">
@@ -466,8 +484,9 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BZ5-WV-P4M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Qkl-dH-j6X" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1820" y="1063.7181409295354"/>
+            <point key="canvasLocation" x="2390" y="1343"/>
         </scene>
         <!--Restaurant List-->
         <scene sceneID="nBr-yo-JnC">
@@ -863,7 +882,4 @@
         <image name="twitter" width="320" height="260"/>
         <image name="viva_la_vida" width="1600" height="1263"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="YYu-Lv-1Wg"/>
-    </inferredMetricsTieBreakers>
 </document>

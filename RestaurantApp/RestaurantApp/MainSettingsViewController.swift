@@ -27,17 +27,17 @@ class MainSettingsViewController: UIViewController {
     
     //It creates the song function to be controlled in another view controller
     @IBAction func playSong(_ sender: Any) {
-        
-        if MusicViewController.soundPlayer!.isPlaying {
-            MusicViewController.eslapsedTime = MusicViewController.soundPlayer!.currentTime
-            print("\(MusicViewController.eslapsedTime)")
-            MusicViewController.soundPlayer!.pause()
-        }else
-        {
-            MusicViewController.soundPlayer!.currentTime = MusicViewController.eslapsedTime
-            MusicViewController.soundPlayer!.play()
+        if  MusicViewController.soundPlayer != nil{
+            if MusicViewController.soundPlayer!.isPlaying {
+                MusicViewController.eslapsedTime = MusicViewController.soundPlayer!.currentTime
+                print("\(MusicViewController.eslapsedTime)")
+                MusicViewController.soundPlayer!.pause()
+            }else
+            {
+                MusicViewController.soundPlayer!.currentTime = MusicViewController.eslapsedTime
+                MusicViewController.soundPlayer!.play()
+            }
         }
-
         
     }
 
