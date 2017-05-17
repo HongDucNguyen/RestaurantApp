@@ -15,7 +15,7 @@ class ResMapViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet weak var resMapView: MKMapView!
     //Declare variable ro receive object from previous view
-    var resMap: Restau?
+    var resMap: Restaurant?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,10 +23,10 @@ class ResMapViewController: UIViewController, MKMapViewDelegate {
         // Do any additional setup after loading the view.
         self.resMapView.delegate = self
         //Convert restaurant address to coordinate and display in map
-        CLGeocoder().geocodeAddressString(resMap!.address, completionHandler: {
+        CLGeocoder().geocodeAddressString(resMap!.address!, completionHandler: {
             (placeMark, error) in
             let resLocation = placeMark![0].location?.coordinate
-            self.resMapView.addAnnotation(resAnnotation(name: self.resMap!.name, address: self.resMap!.address, coordinate: resLocation!))
+            self.resMapView.addAnnotation(resAnnotation(name: self.resMap!.name!, address: self.resMap!.address!, coordinate: resLocation!))
             
             //Set zoom-in map with the restaurant address in the middle of the map
             let span = MKCoordinateSpanMake(0.01, 0.01)
@@ -42,17 +42,17 @@ class ResMapViewController: UIViewController, MKMapViewDelegate {
     
     //It creates the song function to be controlled in another view controller
     @IBAction func playSong(_ sender: Any) {
-        if MusicViewController.soundPlayer!.isPlaying {
-            MusicViewController.eslapsedTime = MusicViewController.soundPlayer!.currentTime
-            print("\(MusicViewController.eslapsedTime)")
-            MusicViewController.soundPlayer!.pause()
-        }else
-        {
-            MusicViewController.soundPlayer!.currentTime = MusicViewController.eslapsedTime
-            MusicViewController.soundPlayer!.play()
+        if MusicViewController.soundPlayer != nil{
+            if MusicViewController.soundPlayer!.isPlaying {
+                MusicViewController.eslapsedTime = MusicViewController.soundPlayer!.currentTime
+                print("\(MusicViewController.eslapsedTime)")
+                MusicViewController.soundPlayer!.pause()
+            }else
+            {
+                MusicViewController.soundPlayer!.currentTime = MusicViewController.eslapsedTime
+                MusicViewController.soundPlayer!.play()
+            }
         }
     }
-
-
 
 }

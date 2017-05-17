@@ -11,7 +11,7 @@ import UIKit
 
 class ResInfoViewController: UIViewController {
     //Delcare a variable to recive data from previous view
-    var r: Restau?
+    var r: Restaurant?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +33,7 @@ class ResInfoViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         if r != nil{
             infoName.text = r!.name
-            infoImage.image = UIImage(named: r!.name)
+            infoImage.image = UIImage(named: r!.image!)
             infoLabel.text = r!.info
             infoLabel.sizeToFit()
         }
@@ -50,17 +50,17 @@ class ResInfoViewController: UIViewController {
 
     //It creates the song function to be controlled in another view controller
     @IBAction func playSong(_ sender: Any) {
-        
-        if MusicViewController.soundPlayer!.isPlaying {
-            MusicViewController.eslapsedTime = MusicViewController.soundPlayer!.currentTime
-            print("\(MusicViewController.eslapsedTime)")
-            MusicViewController.soundPlayer!.pause()
-        }else
-        {
-            MusicViewController.soundPlayer!.currentTime = MusicViewController.eslapsedTime
-            MusicViewController.soundPlayer!.play()
+        if MusicViewController.soundPlayer != nil{
+            if MusicViewController.soundPlayer!.isPlaying {
+                MusicViewController.eslapsedTime = MusicViewController.soundPlayer!.currentTime
+                print("\(MusicViewController.eslapsedTime)")
+                MusicViewController.soundPlayer!.pause()
+            }else
+            {
+                MusicViewController.soundPlayer!.currentTime = MusicViewController.eslapsedTime
+                MusicViewController.soundPlayer!.play()
+            }
         }
-
     }
 
     /*

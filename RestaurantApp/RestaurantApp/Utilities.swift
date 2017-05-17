@@ -27,7 +27,7 @@ class Utility{
                 res.open = "Mon-Fri noon-midnight, Sat and Sun 4pm-1am"
                 res.rating = 5
                 res.website = "https://embla.com.au"
-                res.info = ""
+                res.info = "We are a wine bar in the middle of town.  Our tastes in wine may be slightly weird, but we think there are others out there like us.  Come and join us, it's a small but friendly place"
                 res.image = "embla"
                 Restaurants.append(res)
                 

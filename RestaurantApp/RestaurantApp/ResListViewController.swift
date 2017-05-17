@@ -41,7 +41,7 @@ class ResListViewController: UIViewController, UITableViewDataSource, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "resList", for: indexPath) as! ResListTableViewCell
         cell.nameLabel.text = Utility.Restaurants[indexPath.row].name
-        cell.nameImage.image = UIImage(named: Utility.Restaurants[indexPath.row].name)
+        cell.nameImage.image = UIImage(named: Utility.Restaurants[indexPath.row].image! + "_outdoor")
         cell.nameRating.text = "Rating \(Utility.Restaurants[indexPath.row].rating) stars"
         
         return cell
@@ -63,15 +63,18 @@ class ResListViewController: UIViewController, UITableViewDataSource, UITableVie
     
     //It creates the song function to be controlled in another view controller
     @IBAction func playSong(_ sender: UIButton) {
-        if MusicViewController.soundPlayer!.isPlaying {
-            MusicViewController.eslapsedTime = MusicViewController.soundPlayer!.currentTime
-            print("\(MusicViewController.eslapsedTime)")
-            MusicViewController.soundPlayer!.pause()
-        }else
-        {
-            MusicViewController.soundPlayer!.currentTime = MusicViewController.eslapsedTime
-            MusicViewController.soundPlayer!.play()
+        if MusicViewController.soundPlayer != nil{
+            if MusicViewController.soundPlayer!.isPlaying {
+                MusicViewController.eslapsedTime = MusicViewController.soundPlayer!.currentTime
+                print("\(MusicViewController.eslapsedTime)")
+                MusicViewController.soundPlayer!.pause()
+            }else
+            {
+                MusicViewController.soundPlayer!.currentTime = MusicViewController.eslapsedTime
+                MusicViewController.soundPlayer!.play()
+            }
         }
+        
     }
     
     //Create function to unwind segue, the list will be reloaded

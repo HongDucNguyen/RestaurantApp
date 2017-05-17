@@ -10,7 +10,7 @@ import UIKit
 
 class ResDetailsViewController: UIViewController{
     //Declare a variable to receive data from previous view
-    var rDetails: Restau?
+    var rDetails: Restaurant?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,22 +56,23 @@ class ResDetailsViewController: UIViewController{
     @IBAction func unWindSegue(segue: UIStoryboardSegue){
     }
     @IBAction func makeCall(_ sender: Any) {
-        guard let url = URL(string: "telprompt://\(rDetails!.tel)" ) else { return }
+        guard let url = URL(string: "telprompt://\(rDetails!.tel!)" ) else { return }
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
     
     //It creates the song function to be controlled in another view controller
     @IBAction func playSong(_ sender: Any) {
-        if MusicViewController.soundPlayer!.isPlaying {
-            MusicViewController.eslapsedTime = MusicViewController.soundPlayer!.currentTime
-            print("\(MusicViewController.eslapsedTime)")
-            MusicViewController.soundPlayer!.pause()
-        }else
-        {
-            MusicViewController.soundPlayer!.currentTime = MusicViewController.eslapsedTime
-            MusicViewController.soundPlayer!.play()
+        if MusicViewController.soundPlayer != nil{
+            if MusicViewController.soundPlayer!.isPlaying {
+                MusicViewController.eslapsedTime = MusicViewController.soundPlayer!.currentTime
+                print("\(MusicViewController.eslapsedTime)")
+                MusicViewController.soundPlayer!.pause()
+            }else
+            {
+                MusicViewController.soundPlayer!.currentTime = MusicViewController.eslapsedTime
+                MusicViewController.soundPlayer!.play()
+            }
         }
-
     }
 
 

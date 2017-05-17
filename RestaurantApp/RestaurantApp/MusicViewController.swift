@@ -15,7 +15,7 @@ class MusicViewController: UIViewController {
     static var soundPlayer: AVAudioPlayer?
     static var eslapsedTime: TimeInterval = 0
     var songs = ["something","viva","sign"]
-    var currentIndex = 4
+    var currentIndex = -1
 
     override func viewDidLoad() {
         super.viewDidLoad()
