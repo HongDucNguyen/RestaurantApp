@@ -59,15 +59,22 @@ class ResDetailsViewController: UIViewController{
         guard let url = URL(string: "telprompt://\(rDetails!.tel)" ) else { return }
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
+    
+    //It creates the song function to be controlled in another view controller
+    @IBAction func playSong(_ sender: Any) {
+        if MusicViewController.soundPlayer!.isPlaying {
+            MusicViewController.eslapsedTime = MusicViewController.soundPlayer!.currentTime
+            print("\(MusicViewController.eslapsedTime)")
+            MusicViewController.soundPlayer!.pause()
+        }else
+        {
+            MusicViewController.soundPlayer!.currentTime = MusicViewController.eslapsedTime
+            MusicViewController.soundPlayer!.play()
+        }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
-    */
+
+
+
 
 }
