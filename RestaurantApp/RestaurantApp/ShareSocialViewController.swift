@@ -23,11 +23,11 @@ class ShareSocialViewController: UIViewController {
         let instagramUrl = NSURL(string: instagramHooks)
         if UIApplication.shared.canOpenURL(instagramUrl! as URL)
         {
-            UIApplication.shared.openURL(instagramUrl! as URL)
+            UIApplication.shared.open(instagramUrl! as URL)
             
         } else {
             //redirect to safari because the user doesn't have Instagram
-            UIApplication.shared.openURL(NSURL(string: "http://instagram.com/")! as URL)
+            UIApplication.shared.open(NSURL(string: "http://instagram.com/")! as URL)
         }
 
     }
@@ -39,11 +39,11 @@ class ShareSocialViewController: UIViewController {
         let facebookUrl = NSURL(string: facebookHooks)
         if UIApplication.shared.canOpenURL(facebookUrl! as URL)
         {
-            UIApplication.shared.openURL(facebookUrl! as URL)
+            UIApplication.shared.open(facebookUrl! as URL)
             
         } else {
             //redirect to safari because the user doesn't have Instagram
-            UIApplication.shared.openURL(NSURL(string: "http://facebook.com/")! as URL)
+            UIApplication.shared.open(NSURL(string: "http://facebook.com/")! as URL)
         }
 
     }
@@ -55,11 +55,11 @@ class ShareSocialViewController: UIViewController {
         let twitterUrl = NSURL(string: twitterHooks)
         if UIApplication.shared.canOpenURL(twitterUrl! as URL)
         {
-            UIApplication.shared.openURL(twitterUrl! as URL)
+            UIApplication.shared.open(twitterUrl! as URL)
             
         } else {
             //redirect to safari because the user doesn't have Instagram
-            UIApplication.shared.openURL(NSURL(string: "http://twitter.com/")! as URL)
+            UIApplication.shared.open(NSURL(string: "http://twitter.com/")! as URL)
         }
         
 
