@@ -10,7 +10,7 @@ import UIKit
 
 class ResDetailsViewController: UIViewController{
     //Declare a variable to receive data from previous view
-    var rDetails: Restau?
+    var rDetails: Restaurant?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +41,7 @@ class ResDetailsViewController: UIViewController{
             detailsHours.sizeToFit()
             detailsWeb.sizeToFit()
             detailsAdd.sizeToFit()
+            detailsName.sizeToFit()
         }
     }
     //Override function to prepare for segue
@@ -56,7 +57,7 @@ class ResDetailsViewController: UIViewController{
     @IBAction func unWindSegue(segue: UIStoryboardSegue){
     }
     @IBAction func makeCall(_ sender: Any) {
-        guard let url = URL(string: "telprompt://\(rDetails!.tel)" ) else { return }
+        guard let url = URL(string: "telprompt://\(rDetails!.tel!)" ) else { return }
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
 
