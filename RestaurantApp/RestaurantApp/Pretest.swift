@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+/*
 class Restau{
     var name: String
     var address: String
@@ -38,4 +38,4 @@ class Utility{
         ]
     }
 }
-
+*/
