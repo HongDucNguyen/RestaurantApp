@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+/*
 class Restau{
     var name: String
     var address: String
@@ -37,5 +37,5 @@ class Utility{
                    open: "Mon 11.30am-03.00pm, Tue-Sat 11.30am-10.00pm", rating: 4, website: "https://www.tipo00.com.au", info: "Tipo 00 – a name to reference the flour used in what we specialize in ‘pasta’. A restaurant to showcase our passion for Italian food, pasta and beverage.")
         ]
     }
-}
+}*/
 
