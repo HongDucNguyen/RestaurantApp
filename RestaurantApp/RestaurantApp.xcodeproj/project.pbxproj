@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CF234FC1ECD32C400C87917 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF234FB1ECD32C400C87917 /* AboutUsViewController.swift */; };
 		9B4C24FC1ECB127C009FA65C /* MainSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C24FB1ECB127C009FA65C /* MainSettingsViewController.swift */; };
 		9B4C24FE1ECB1292009FA65C /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C24FD1ECB1292009FA65C /* MusicViewController.swift */; };
 		9B4C25021ECB1740009FA65C /* something.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B4C24FF1ECB1740009FA65C /* something.mp3 */; };
@@ -53,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3CF234FB1ECD32C400C87917 /* AboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		9B4C24FB1ECB127C009FA65C /* MainSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSettingsViewController.swift; sourceTree = "<group>"; };
 		9B4C24FD1ECB1292009FA65C /* MusicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		9B4C24FF1ECB1740009FA65C /* something.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = something.mp3; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				9B9AC7CA1EBE883C008EDCA1 /* AppDelegate.swift */,
 				9B9AC7CC1EBE883C008EDCA1 /* ViewController.swift */,
 				9B9AC7CE1EBE883C008EDCA1 /* Main.storyboard */,
+				3CF234FB1ECD32C400C87917 /* AboutUsViewController.swift */,
 				9B4C24FB1ECB127C009FA65C /* MainSettingsViewController.swift */,
 				9B4C24FD1ECB1292009FA65C /* MusicViewController.swift */,
 				9BE79EBA1EC2E51C00B84B0A /* ResAnnotation.swift */,
@@ -343,6 +346,7 @@
 				9B4C24FE1ECB1292009FA65C /* MusicViewController.swift in Sources */,
 				9B9AC7CD1EBE883C008EDCA1 /* ViewController.swift in Sources */,
 				9BE79EBB1EC2E51C00B84B0A /* ResAnnotation.swift in Sources */,
+				3CF234FC1ECD32C400C87917 /* AboutUsViewController.swift in Sources */,
 				9B4C24FC1ECB127C009FA65C /* MainSettingsViewController.swift in Sources */,
 				9B9AC7CB1EBE883C008EDCA1 /* AppDelegate.swift in Sources */,
 				9BE79EB91EC2B58600B84B0A /* ResMapViewController.swift in Sources */,
