@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -243,21 +243,21 @@
                                 <rect key="frame" x="-16" y="50" width="407" height="557"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0eG-lE-d72">
-                                <rect key="frame" x="0.0" y="116.5" width="375" height="127.5"/>
+                                <rect key="frame" x="0.0" y="116.5" width="375" height="128"/>
                                 <color key="backgroundColor" red="0.80877220809999995" green="0.80877220809999995" blue="0.80877220809999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="0eG-lE-d72" secondAttribute="height" multiplier="375:128" id="8Zp-b8-Vay"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cbI-A3-ncV">
-                                <rect key="frame" x="0.0" y="412" width="375" height="127.5"/>
+                                <rect key="frame" x="0.0" y="412" width="375" height="128"/>
                                 <color key="backgroundColor" red="0.80877220809999995" green="0.80877220809999995" blue="0.80877220809999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cbI-A3-ncV" secondAttribute="height" multiplier="375:128" id="TwJ-5q-1og"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ByR-Tv-foD">
-                                <rect key="frame" x="0.0" y="264" width="375" height="128.5"/>
+                                <rect key="frame" x="0.0" y="264.5" width="375" height="128"/>
                                 <color key="backgroundColor" red="0.80877220809999995" green="0.80877220809999995" blue="0.80877220809999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ByR-Tv-foD" secondAttribute="height" multiplier="375:128" id="0RN-nS-blE"/>
@@ -284,7 +284,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chainsmokers_coldplay" translatesAutoresizingMaskIntoConstraints="NO" id="iwJ-ln-sy9">
-                                <rect key="frame" x="15" y="138.5" width="109" height="81.5"/>
+                                <rect key="frame" x="14.5" y="139.5" width="109.5" height="81.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="iwJ-ln-sy9" secondAttribute="height" multiplier="109:82" id="oPP-Ni-ggh"/>
                                 </constraints>
@@ -310,13 +310,13 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="viva_la_vida" translatesAutoresizingMaskIntoConstraints="NO" id="Nbe-Vo-dYD">
-                                <rect key="frame" x="14.5" y="287.5" width="109.5" height="82.5"/>
+                                <rect key="frame" x="15" y="287.5" width="109" height="82.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Nbe-Vo-dYD" secondAttribute="height" multiplier="109:82" id="yHd-Ac-aSr"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="harry_styles" translatesAutoresizingMaskIntoConstraints="NO" id="yq4-uX-vnL">
-                                <rect key="frame" x="15.5" y="435.5" width="108.5" height="82"/>
+                                <rect key="frame" x="15" y="435.5" width="109" height="82"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="yq4-uX-vnL" secondAttribute="height" multiplier="109:82" id="NFj-4A-u7N"/>
                                 </constraints>
@@ -340,7 +340,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coldplay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4BT-ga-5zS">
-                                <rect key="frame" x="134" y="289" width="172" height="25"/>
+                                <rect key="frame" x="134" y="289.5" width="172" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="7ev-tp-1OE"/>
                                 </constraints>
@@ -349,7 +349,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Viva La Vida" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kc-x6-OtD">
-                                <rect key="frame" x="134" y="324" width="167" height="25"/>
+                                <rect key="frame" x="134" y="324.5" width="167" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="ZXl-LW-ljX"/>
                                 </constraints>
@@ -506,7 +506,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jonathan Ruiz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ih7-qf-zz9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jonathan Ruiz SID: " textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ih7-qf-zz9">
                                 <rect key="frame" x="22" y="131" width="143" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -691,7 +691,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hqn-F6-vXl" id="gGh-st-aCE">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FVt-KU-ce5">

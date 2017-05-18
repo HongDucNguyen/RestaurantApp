@@ -57,6 +57,12 @@ class ResDetailsViewController: UIViewController{
     }
     @IBAction func makeCall(_ sender: Any) {
         guard let url = URL(string: "telprompt://\(rDetails!.tel!)" ) else { return }
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else {
+            // Fallback on earlier versions
+            UIApplication.shared.openURL(url)
+        }
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
     
