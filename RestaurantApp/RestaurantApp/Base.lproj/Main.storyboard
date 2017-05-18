@@ -1060,6 +1060,9 @@
                                     <constraint firstAttribute="width" secondItem="bsc-4k-4lU" secondAttribute="height" multiplier="1:1" id="Ya8-Gv-xX8"/>
                                 </constraints>
                                 <state key="normal" title="Back" image="back"/>
+                                <connections>
+                                    <segue destination="SVC-VY-IjF" kind="unwind" unwindAction="unWindSegueWithSegue:" id="axo-wK-mfJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1081,6 +1084,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgE-xa-mJs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="SVC-VY-IjF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3128.8000000000002" y="555.47226386806597"/>
         </scene>
