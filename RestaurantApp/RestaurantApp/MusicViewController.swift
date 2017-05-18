@@ -12,9 +12,9 @@ import AVFoundation
 class MusicViewController: UIViewController {
     
     //to make the music player reachable and accesible for public
-    static var soundPlayer: AVAudioPlayer?
-    static var eslapsedTime: TimeInterval = 0
-    var songs = ["something","viva","sign"]
+    //static var soundPlayer: AVAudioPlayer?
+    //static var eslapsedTime: TimeInterval = 0
+    //var songs = ["something","viva","sign"]
     var currentIndex = -1
 
     override func viewDidLoad() {
@@ -32,13 +32,13 @@ class MusicViewController: UIViewController {
     //It creates the song function to be controlled in another view controller
     @IBAction func playSong(_ sender: UIButton) {
         if currentIndex != sender.tag{
-            let path = Bundle.main.path(forResource:songs[sender.tag], ofType: "mp3")
+            let path = Bundle.main.path(forResource:Utility.songs[sender.tag], ofType: "mp3")
             let url = URL(fileURLWithPath: path!)
             do{
-                try MusicViewController.soundPlayer = AVAudioPlayer(contentsOf: url)
+                try Utility.soundPlayer = AVAudioPlayer(contentsOf: url)
             }catch {print("file not available")}
             currentIndex = sender.tag
-            MusicViewController.soundPlayer!.play()
+            Utility.soundPlayer!.play()
         }else
         {
             Utility.musicPlayPause()

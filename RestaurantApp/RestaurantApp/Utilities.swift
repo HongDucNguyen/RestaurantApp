@@ -9,8 +9,12 @@
 import Foundation
 import CoreData
 import UIKit
+import AVFoundation
 
 class Utility{
+    static var soundPlayer: AVAudioPlayer?
+    static var eslapsedTime: TimeInterval = 0
+    static var songs = ["something","viva","sign"]
     static var Restaurants: [Restaurant] = []
     class func loadInfo(){
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -133,15 +137,14 @@ class Utility{
             }
     }
     class func musicPlayPause(){
-        if MusicViewController.soundPlayer != nil{
-            if MusicViewController.soundPlayer!.isPlaying {
-                MusicViewController.eslapsedTime = MusicViewController.soundPlayer!.currentTime
-                print("\(MusicViewController.eslapsedTime)")
-                MusicViewController.soundPlayer!.pause()
+        if soundPlayer != nil{
+            if soundPlayer!.isPlaying {
+                eslapsedTime = soundPlayer!.currentTime
+                soundPlayer!.pause()
             }else
             {
-                MusicViewController.soundPlayer!.currentTime = MusicViewController.eslapsedTime
-                MusicViewController.soundPlayer!.play()
+                soundPlayer!.currentTime = eslapsedTime
+                soundPlayer!.play()
             }
         }
 

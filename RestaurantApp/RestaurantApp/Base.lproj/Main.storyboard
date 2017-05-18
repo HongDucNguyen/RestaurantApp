@@ -660,7 +660,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hqn-F6-vXl" id="gGh-st-aCE">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FVt-KU-ce5">
@@ -1050,7 +1050,6 @@
                                 </constraints>
                                 <state key="normal" title="Settings" image="playpause"/>
                                 <connections>
-                                    <action selector="playGoo:" destination="RcO-oS-ItP" eventType="touchUpInside" id="igS-70-fKy"/>
                                     <action selector="playSong:" destination="RcO-oS-ItP" eventType="touchUpInside" id="pyP-We-8Dg"/>
                                 </connections>
                             </button>
