@@ -41,15 +41,7 @@ class MusicViewController: UIViewController {
             MusicViewController.soundPlayer!.play()
         }else
         {
-            if MusicViewController.soundPlayer!.isPlaying {
-                MusicViewController.eslapsedTime = MusicViewController.soundPlayer!.currentTime
-                print("\(MusicViewController.eslapsedTime)")
-                MusicViewController.soundPlayer!.pause()
-            }else
-            {
-                MusicViewController.soundPlayer!.currentTime = MusicViewController.eslapsedTime
-                MusicViewController.soundPlayer!.play()
-            }
+            Utility.musicPlayPause()
         }
     }
     @IBAction func unWindSegue(segue: UIStoryboardSegue){
